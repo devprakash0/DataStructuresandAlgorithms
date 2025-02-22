@@ -78,5 +78,46 @@ namespace DataStructuresandAlgorithms.Array
             ints[0] = 3;
             count++;
         }
+
+        // Insert at any given index O(n)
+        public void Insert_at_any_given_index()
+        {
+            int[] ints = new int[5];
+            int count = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                ints[count] = i;
+                count++;
+            }
+            // insert at any given index
+            int index = 1;
+            for (int i = count; i >= index; i--)
+            {
+                ints[i] = ints[i - 1];
+            }
+            ints[index] = 3;
+            count++;
+        }
+
+        // Insert anywhere in the array O(n)
+        public void Insert_anywhere_in_the_array()
+        {
+            int[] ints = new int[5];
+            int count = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                ints[count] = i;
+                count++;
+            }
+            // insert anywhere in the array
+            int index = 1;
+            int value = 3;
+            for (int i = count; i >= index; i--)
+            {
+                ints[i] = ints[i - 1];
+            }
+            ints[index] = value;
+            count++;
+        }
     }
 }
